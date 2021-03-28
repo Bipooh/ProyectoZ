@@ -1,0 +1,25 @@
+<%- include("./partials/head") %>
+    <link rel="stylesheet" href="/css/styleslogin.css">
+</head>
+<body>
+    <%- include("./partials/header") %>
+    <main>
+        <form action="/user/login" method="POST" class="login">
+            <h2>Inicia sesión</h2>
+            <div class="form-login">
+                <label for="">Nombre de usuario:</label>
+                <input type="text" placeholder="Username" name="username-login" class="texto" required>
+            </div>
+            <div class="form-login">
+                <label for="">Contraseña:</label>
+                <input type="password" placeholder="Password" name="password-login" class="texto" required>
+            </div>
+            <div class="form-login-button">
+                <input type="submit" value="Entrar" class="button-login">
+            </div>
+            <p>¿No tienes una cuenta? <a href="/user/register">Registrate aquí</a></p>
+        </form>
+    </main>
+    <%- include("./partials/footer") %>
+</body>
+</html>

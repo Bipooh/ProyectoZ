@@ -1,0 +1,90 @@
+<%- include("./partials/head") %>
+    <link rel="stylesheet" href="/css/stylesregister.css">
+</head>
+<body>
+    <%- include("./partials/header") %>
+    <main>
+        <form action="/product/detail" method="POST" class="register">
+            <h2>Publicar producto</h2>
+            <div class="form-register">
+                <label for="">Nombre del producto:</label>
+                <input type="text" name="product-name" placeholder="Ej. Air Max 97" class="texto" required>
+            </div>
+            <div class="form-register">
+                <label for="">Marca del producto:</label>
+                <input type="text" name="product-marca" placeholder="Ej. Nike, Adidas..." class="texto" required>
+            </div>
+            <div class="form-register">
+                <label for="">Precio del producto:</label>
+                <input type="number" name="product-price" placeholder="Ej. 90.00" class="texto" required>
+            </div>
+            <div class="form-register">
+                <label>Selecciona la categoria:</label>
+                <label>
+                    <input type="radio" name="category-product" value="zapatos" checked>
+                    Zapatos
+                </label>
+                <label for="category-register">
+                    <input type="radio" name="category-product" value="bolsos">
+                    Bolsos
+                </label>
+                <label for="category-register">
+                    <input type="radio" name="category-product" value="accesorios">
+                    Accesorios
+                </label>
+                <label for="category-register">
+                    <input type="radio" name="category-product" value="ropa">
+                    Ropa
+                </label>
+            </div>
+            <div class="form-register">
+                <label>Descripción del producto:</label><br>
+                <label>Tallas disponibles:</label>
+                <label>
+                    <input type="checkbox" name="talla-product" value="niños" checked>
+                    Niños
+                </label>
+                <label>
+                    <input type="checkbox" name="talla-product" value="niñas">
+                    Niñas
+                </label>
+                <label for="category-register">
+                    <input type="checkbox" name="talla-product" value="hombres">
+                    Hombres
+                </label>
+                <label for="category-register">
+                    <input type="checkbox" name="talla-product" value="mujeres">
+                    Mujeres
+                </label>
+            </div>
+            <div class="form-register">
+                <label>Colores disponibles:</label>
+                <label>
+                    <input type="checkbox" name="color-product" value="negro" checked>
+                    Negro
+                </label>
+                <label>
+                    <input type="checkbox" name="color-product" value="blanco">
+                    Blanco
+                </label>
+                <label for="category-register">
+                    <input type="checkbox" name="color-product" value="otro">
+                    Otro
+                </label>
+                <label for="category-register">
+                    <input type="checkbox" name="color-product" value="variado">
+                    Variado
+                </label>
+            </div>
+            <div class="form-register">
+                <label for="">Cantidad del producto:</label>
+                <input type="number" name="cantidad-producto" placeholder="Ej. 10" class="texto" required>
+            </div>
+            <div class="form-register-button">
+                <input type="submit" value="Publicar" class="button-register">
+            </div>
+        </form>
+    </main>
+    <%- include("./partials/footer") %>
+</body>
+</html>
