@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6819d22b19.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/stylesregister.css">
+    <title>Tu Zapato Shop</title>
+</head>
+<body>
+    <header>
+        <div class="main-header-top">
+            <img src="/images/zapato.png" class="logo">
+
+            <ul class="list-categories">
+                <li><a href="">Hombres</a></li>
+                <li><a href="">Mujeres</a></li>
+                <li><a href="">Niños</a></li>
+            </ul>
+            
+            <ul class="list-users">
+                <li><a href="/login"><i class="fas fa-user"></i> Mi cuenta</a></li>
+                <li><a href=""><i class="fas fa-heart"></i> Favoritos</a></li>
+                <li><a href="/shopping-cart"><i class="fas fa-shopping-cart"></i> Mi carrito</a></li>
+            </ul>
+        </div>
+        <div class="main-header-bottom">
+            <ul class="list-categories-bottom">
+                <li><a href="">Ofertas</a></li>
+                <li><a href="">Zapatos</a></li>
+                <li><a href="">Bolsos</a></li>
+                <li><a href="">Accesorios</a></li>
+                <li><a href="">Marcas</a></li>
+            </ul>
+            <form action="" method="POST" class="search-nav">
+                <input type="text" class="search-bar" placeholder="Buscar categoria, accesorio, marca" />
+                <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <form action="user/register" method="POST" class="register">
+            <h2>Publicar producto</h2>
+            <div class="form-register">
+                <label for="">Nombre del producto:</label>
+                <input type="text" name="product-name" placeholder="Ej. Air Max 97" class="texto" required>
+            </div>
+            <div class="form-register">
+                <label for="">Marca del producto:</label>
+                <input type="text" name="product-marca" placeholder="Ej. Nike, Adidas..." class="texto" required>
+            </div>
+            <div class="form-register">
+                <label for="">Precio del producto:</label>
+                <input type="number" name="product-price" placeholder="Ej. 90.00" class="texto" required>
+            </div>
+            <div class="form-register">
+                <label>Selecciona la categoria:</label>
+                <label>
+                    <input type="radio" name="category-product" value="zapatos" checked>
+                    Zapatos
+                </label>
+                <label for="category-register">
+                    <input type="radio" name="category-product" value="bolsos">
+                    Bolsos
+                </label>
+                <label for="category-register">
+                    <input type="radio" name="category-product" value="accesorios">
+                    Accesorios
+                </label>
+                <label for="category-register">
+                    <input type="radio" name="category-product" value="ropa">
+                    Ropa
+                </label>
+            </div>
+            <div class="form-register">
+                <label>Descripción del producto:</label><br>
+                <label>Tallas disponibles:</label>
+                <label>
+                    <input type="checkbox" name="talla-product" value="niños" checked>
+                    Niños
+                </label>
+                <label>
+                    <input type="checkbox" name="talla-product" value="niñas">
+                    Niñas
+                </label>
+                <label for="category-register">
+                    <input type="checkbox" name="talla-product" value="hombres">
+                    Hombres
+                </label>
+                <label for="category-register">
+                    <input type="checkbox" name="talla-product" value="mujeres">
+                    Mujeres
+                </label>
+            </div>
+            <div class="form-register">
+                <label>Colores disponibles:</label>
+                <label>
+                    <input type="checkbox" name="color-product" value="negro" checked>
+                    Negro
+                </label>
+                <label>
+                    <input type="checkbox" name="color-product" value="blanco">
+                    Blanco
+                </label>
+                <label for="category-register">
+                    <input type="checkbox" name="color-product" value="otro">
+                    Otro
+                </label>
+                <label for="category-register">
+                    <input type="checkbox" name="color-product" value="variado">
+                    Variado
+                </label>
+            </div>
+            <div class="form-register">
+                <label for="">Cantidad del producto:</label>
+                <input type="number" name="cantidad-producto" placeholder="Ej. 10" class="texto" required>
+            </div>
+            <div class="form-register-button">
+                <input type="submit" value="Publicar" class="button-register">
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div class="main-footer-top">
+            <p><i>Todos los envios son gratuitos</i></p>
+        </div>
+        <div class="main-footer-bottom">
+            <div class="section1">                
+                <h3 class="title-footer">
+                    Mas información de la compañia
+                </h3>
+                <img src="/images/zapato.png" class="logo" />
+                <p class="desc-company">
+                    Esta compañia se dedica a la venta de zapatos<br> y accesorios a la moda para hombres,
+                    mujeres<br> y niños. Todos los productos que se venden en<br> esta empresa son de buena calidad.
+                </p>
+            </div>
+            <div class="section2">
+                <h3 class="title-footer">
+                    Redes sociales
+                </h3>
+                <div class="redes-sociales">
+                    <div class="social-network-facebook">
+                        <a href="">
+                            <img src="/images/facebook.png" class="img-red-fb" width="40px"/>
+                            <label>
+                                Siguenos en Facebook
+                            </label>    
+                        </a>
+                    </div>
+                    <div class="social-network-twitter">
+                        <a href="">
+                            <img src="/images/instagram.png" class="img-red-tw" width="40px"/>
+                            <label>
+                                Siguenos en Twitter
+                            </label>
+                        </a>
+                    </div>
+                    <div class="social-network-instagram">
+                        <a href="">
+                            <img src="/images/twitter.png" class="img-red-ig" width="32px" />
+                            <label>
+                                Siguenos en Instagram
+                            </label>
+                        </a>
+                    </div>
+                    <div class="social-network-youtube">
+                        <a href="">
+                            <img src="/images/youtube.png" class="img-red-yt" width="33px"/>
+                            <label>
+                                Siguenos en Youtube
+                            </label>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="section3">
+                <h3 class="title-footer">
+                    Contáctanos
+                </h3>
+                <div class="info-column">
+                    <div class="info-contact-home">
+                        <i class="fas fa-home"></i>
+                        <p class="desc-contact"> 
+                            Valencia, Venezuela.<br>
+                            CC. Mediterranean Plaza.
+                        </p>
+                    </div>
+                    <div class="info-contact-phone">
+                        <i class="fas fa-mobile-alt"></i>
+                        <label class="desc-contact-phone">
+                            +58 424-4540566
+                        </label>
+                    </div>
+                    <div class="info-contact-email">
+                        <i class="far fa-envelope"></i>
+                        <label class="desc-contact">
+                            tuzapatoshop@gmail.com
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
