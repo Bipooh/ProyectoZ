@@ -105,78 +105,28 @@
                     </button>
                 </div>
                 <div class="products-body-main">
-                    <a href="">
-                        <article class="produtcs-body-detail">
-                            <div class="product-body-img" >
-                                <img src="/images/air-max-97-mens-shoe-SD3ZmW.jpg" width="250">
-                            </div>
-                            <div class="product-body-detail">
-                                <span class="marca">
-                                    Nike
-                                </span>
-                                <span class="name">
-                                    Air Max 97 for Men
-                                </span>
-                                <span class="price">
-                                    USD <b>$70.00</b>
-                                </span>
-                            </div>
-                        </article>
-                    </a>
-                    <a href="">
-                        <article class="produtcs-body-detail">
-                            <div class="product-body-img" >
-                                <img src="/images/blazer-mid-77-vintage-mens-shoe-nw30B2.jpg" width="250">
-                            </div>
-                            <div class="product-body-detail">
-                                <span class="marca">
-                                    Nike
-                                </span>
-                                <span class="name">
-                                    Blazer Mid' 77 Vintage
-                                </span>
-                                <span class="price">
-                                    USD <b>$120.00</b>
-                                </span>
-                            </div>
-                        </article>
-                    </a>
-                    <a href="">
-                        <article class="produtcs-body-detail">
-                            <div class="product-body-img" >
-                                <img src="/images/victori-one-mens-slide-Wf3qJv.jpg" width="250">
-                            </div>
-                            <div class="product-body-detail">
-                                <span class="marca">
-                                    Nike
-                                </span>
-                                <span class="name">
-                                    Victori one for Men
-                                </span>
-                                <span class="price">
-                                    USD <b>$20.00</b>
-                                </span>
-                            </div>
-                        </article>
-                    </a>
-                    <a href="">
-                        <article class="produtcs-body-detail">
-                            <div class="product-body-img" >
-                                <img src="/images/air-force-1-07-craft-mens-shoe-sq1KlC.jpg" width="250">
-                            </div>
-                            <div class="product-body-detail">
-                                <span class="marca">
-                                    Nike
-                                </span>
-                                <span class="name">
-                                    Air Force 1 
-                                </span>
-                                <span class="price">
-                                    USD <b>$90.00</b>
-                                </span>
-                            </div>
-                        </article>
-                    </a>
+
+                    <% for (let i = 0; i < products.length; i++) { %>
+                        <a href="/product/detail">
+                            <article class="produtcs-body-detail">
+                                <div class="product-body-img" >
+                                    <img src="/images/zapatos/<%= products[i].image %>" width="250">
+                                </div>
+                                <div class="product-body-detail">
+                                    <span class="marca">
+                                        <%= products[i].marca %>
+                                    </span>
+                                    <span class="name">
+                                        <%= products[i].nombre %>
+                                    </span>
+                                    <span class="price">
+                                        USD <b>$<%= products[i].price %>.00</b>
+                                    </span>
+                                </div>
+                            </article>
+                        </a>
+                    <% } %>
+
                 </div>
             </div>
         </section>

@@ -52,6 +52,15 @@ footer {
     font-size: 17px;
 }
 
+.text-danger {
+    color: red;
+    margin: 10px;
+    font-size: 13px;
+}
+.is-invalid {
+    border: red solid 0.5px;
+}
+
 .main-header-bottom {
     background-color: #30332E;
     text-align: center;
@@ -128,7 +137,6 @@ h2 {
 .texto {
     padding: 10px;
     width: 100%;
-    border: none;
     border-radius: 3px;
     transition: 0.8s;
 }

@@ -125,10 +125,19 @@ h2 {
     margin-bottom: 20px;
     text-align: center;
 }
+
+.text-danger {
+    color: red;
+    margin: 10px;
+    font-size: 13px;
+}
+.is-invalid {
+    border: red solid 0.5px;
+}
+
 .texto {
     padding: 10px;
     width: 100%;
-    border: none;
     border-radius: 3px;
     transition: 0.8s;
 }
@@ -153,6 +162,8 @@ h2 {
     background-color: rgb(204, 204, 204);
     border: black solid 0.1px;
 }
+
+
 
 .main-footer-top {
     text-align: center;

@@ -4,13 +4,8 @@
 <body>
     <%- include("./partials/header") %>
     <main>
-        <form action="/" method="POST" class="register">
-            <h2>Publicar producto</h2>
-            <div class="form-register">
-                <label for="">Escribe el <b>Id</b> que te fue asignado:</label>
-                <input type="number" name="idproduct" placeholder="Ej. 1, 2, 3, 4 ..." class="texto"
-                required minlength="1" maxlength="3">
-            </div>
+        <form action="/product/detail?_method=PUT" method="POST" class="register">
+            <h2>Editar producto</h2>
             <div class="form-register">
                 <label for="">Nombre del producto:</label>
                 <input type="text" name="nameproduct" placeholder="Ej. Air Max 97" class="texto" required>
