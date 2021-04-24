@@ -1,30 +1,13 @@
 var express = require("express");
 var router = express.Router();
-var multer = require("multer");
 var path = require("path");
+var multer = require("multer");
 
-var { body } = require("express-validator");
-
-var validarCreateForm = [
-    body("name").notEmpty().withMessage("Debes completar este campo").bail()
-    .isLength({min: 5}).withMessage("Debes completar un minimo de 5 caracteres"),
-    body("email").notEmpty().withMessage("Debes completar este campo").bail()
-    .isEmail().withMessage("Debes colocar un Email válido"),
-    body("username").notEmpty().withMessage("Debes completar este campo").bail()
-    .isLength({min: 5}).withMessage("Debes completar un minimo de 5 caracteres"),
-    body("password").notEmpty().withMessage("Debes completar este campo").bail()
-    .isLength({min: 5}).withMessage("Debes completar un minimo de 5 caracteres"),
-];
-var validarLoginForm = [
-    body("username")
-        .notEmpty().withMessage("Debes escribir tu nombre de usuario aqui").bail()
-        .isLength({min:5}).withMessage("Debe contener un mínimo de 5 caracteres"),
-    body("password")
-        .notEmpty().withMessage("Debes escribir tu contraseña").bail()
-        .isLength({min:5}).withMessage("Debe contener un mínimo de 5 caracteres"),
-];
-
+var validarCreateForm = require("../middlewares/validarCreateForm");
+var validarLoginForm = require("../middlewares/validarLoginForm");
 var userController = require("../controllers/usersController");
+var guestMiddleware = require("../middlewares/guestMiddleware");
+var authMiddleware = require("../middlewares/authMiddleware");
 
 var storage = multer.diskStorage({
     destination: function(req,file,cb){
@@ -39,11 +22,13 @@ var storage = multer.diskStorage({
 
 var uploadFile = multer({storage: storage});
 
-router.get("/login", userController.login);
-router.post("/login",validarLoginForm, userController.logining);
+router.get("/login",guestMiddleware, userController.login);
+router.post("/login",validarLoginForm, userController.loginProcess);
 
-router.get("/register", userController.register);
-router.post("/register", validarCreateForm ,userController.create);
+router.get("/register",guestMiddleware, userController.register);
+router.post("/register", validarCreateForm, uploadFile.single("image") ,userController.create);
 
+router.get("/profile",authMiddleware, userController.profile);
+router.get("/logout", userController.logout);
 
 module.exports = router;

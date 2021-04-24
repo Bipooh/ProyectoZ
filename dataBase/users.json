@@ -1,0 +1,52 @@
+[
+ {
+  "id": 1,
+  "name": "aasdasdads",
+  "email": "asdasdads@gmail.com",
+  "username": "sdsadsda",
+  "date-register": "2202-02-22",
+  "category": "hombre",
+  "image": "IMG-20190716-WA0038.jpg",
+  "password": "adsdsads"
+ },
+ {
+  "id": 2,
+  "name": "aasdasdads",
+  "email": "asdasdads@gmail.com",
+  "username": "sdsadsda",
+  "date-register": "2202-02-22",
+  "category": "hombre",
+  "image": "IMG-20190716-WA0038.jpg",
+  "password": "$2a$10$0dyo80bQAEVU01bltGgLW.Ol0CBQbrAMRFLDP9CKB303nVJiGkPWy"
+ },
+ {
+  "id": 3,
+  "name": "Jose david jo",
+  "email": "joseq@gmail.com",
+  "username": "jdoseojd",
+  "date-register": "1999-11-30",
+  "category": "hombre",
+  "image": "",
+  "password": "$2a$10$ZlDV62oxoSeKXNKhmAxMu.IY7mpjreYfzQ/7Q.6Cp/zcRFPsY6ese"
+ },
+ {
+  "id": 4,
+  "name": "Jose david jo",
+  "email": "joseadsq@gmail.com",
+  "username": "jdoseojd",
+  "date-register": "",
+  "category": "hombre",
+  "image": "",
+  "password": "$2a$10$BqIDvMxMVpXNgQaXUZmJAuAw.8xqadcwppA3050bvAbl1LwOX5tkS"
+ },
+ {
+  "id": 5,
+  "name": "Jose David Guevara",
+  "email": "josedavid@gmail.com",
+  "username": "Bipooh",
+  "date-register": "1999-11-30",
+  "category": "hombre",
+  "image": "",
+  "password": "$2a$10$rk4EPhkonT.gV67GTdEWReuYUknyakszFuRVA8OBE6aEoQjC0wZaS"
+ }
+]

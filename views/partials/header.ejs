@@ -11,7 +11,9 @@
         <ul class="list-users">
             <li><a href="/user/login"><i class="fas fa-user"></i> Mi cuenta</a></li>
             <li><a href=""><i class="fas fa-heart"></i> Favoritos</a></li>
-            <li><a href=""><i class="fas fa-shopping-cart"></i> Mi carrito</a></li>
+            <% if (locals.isLogged) { %>
+                <li><a href=""><i class="fas fa-shopping-cart"></i> Mi carrito</a></li>
+            <% } %>
         </ul>
     </div>
     <div class="main-header-bottom">

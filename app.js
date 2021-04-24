@@ -1,6 +1,9 @@
 var express = require("express");
 var path = require("path");
 var methodOverride = require("method-override");
+var session = require("express-session");
+var cookies = require("cookie-parser");
+var userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 
 var app = express();
 
@@ -15,6 +18,13 @@ app.use(methodOverride("_method"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+    secret: "Hola",
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(cookies());
+app.use(userLoggedMiddleware);
 
 app.use("/", indexRouter);
 app.use("/user", userRouter);

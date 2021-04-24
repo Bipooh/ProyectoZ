@@ -1,0 +1,13 @@
+<%- include("./partials/head") %>
+    <link rel="stylesheet" href="/css/stylesindex.css">
+</head>
+<body>
+    <%- include("./partials/header") %>
+    <main>
+        <h1> Hola usuario: <%= user.username %></h1>
+        <h2> Tu correo es: <%= user.email %></h2>
+        <button><a href="/user/logout">Cerrar sesion</a></button>
+    </main>
+    <%- include("./partials/footer") %>
+</body>
+</html>

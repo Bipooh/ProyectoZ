@@ -1,10 +1,14 @@
 const fs = require("fs");
+const path = require("path");
+const productsDataBase = path.join(__dirname, "../dataBase/products.json");
 
-let archivoProducto = JSON.parse(fs.readFileSync("products.json", "utf-8"));
+let archivoProducto = JSON.parse(fs.readFileSync(productsDataBase, "utf-8"));
 
 const indexController = {
     index: function(req,res) {
-        res.render("index", {products: archivoProducto});
+        console.log("Estas en profile");
+        console.log(req.session);
+        return res.render("index", {products: archivoProducto});
     }
 }
 

@@ -1,6 +1,8 @@
 const fs = require("fs");
+const path = require("path");
 
-let archivoProducto = fs.readFileSync("products.json", "utf-8");
+const productsDataBase = path.join(__dirname, "../dataBase/products.json");
+let archivoProducto = fs.readFileSync(productsDataBase, "utf-8");
 
 const productController = {
     detail: function(req,res) {
@@ -32,7 +34,7 @@ const productController = {
         productos.push(producto);
 
         let productosJSON = JSON.stringify(productos);
-        fs.writeFileSync("products.json", productosJSON);        
+        fs.writeFileSync(productsDataBase, productosJSON);        
 
         res.redirect("/");
     },
